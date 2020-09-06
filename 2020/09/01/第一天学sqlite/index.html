@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第一天学sqlite | NEVAR OFFICIAL</title><meta name="description" content="SQLite 是什么？SQLite是一个轻量级的软件库，实现了自给自足、无服务器、零配置、事务性的SQL数据库引擎。 Linux如何安装SQLite ？发行版：Ubuntu 19.10 1sudo apt install sqlite  安装成功后，运行： 123456nevar@ubuntu:~$ sqlite3SQLite version 3.29.0 2019-07-10 17:32:03E"><meta name="keywords" content="sqlite"><meta name="author" content="Nevar"><meta name="copyright" content="Nevar"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="shortcut icon" href="/img/bird.png"><link rel="canonical" href="http://yoursite.com/2020/09/01/%E7%AC%AC%E4%B8%80%E5%A4%A9%E5%AD%A6sqlite/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="第一天学sqlite"><meta property="og:url" content="http://yoursite.com/2020/09/01/%E7%AC%AC%E4%B8%80%E5%A4%A9%E5%AD%A6sqlite/"><meta property="og:site_name" content="NEVAR OFFICIAL"><meta property="og:description" content="SQLite 是什么？SQLite是一个轻量级的软件库，实现了自给自足、无服务器、零配置、事务性的SQL数据库引擎。 Linux如何安装SQLite ？发行版：Ubuntu 19.10 1sudo apt install sqlite  安装成功后，运行： 123456nevar@ubuntu:~$ sqlite3SQLite version 3.29.0 2019-07-10 17:32:03E"><meta property="og:image" content="http://yoursite.com/img/head_img.PNG"><meta property="article:published_time" content="2020-09-01T08:12:41.000Z"><meta property="article:modified_time" content="2020-09-02T03:40:27.923Z"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第一天学sqlite | NEVAR OFFICIAL</title><meta name="description" content="SQLite 是什么？SQLite是一个轻量级的软件库，实现了自给自足、无服务器、零配置、事务性的SQL数据库引擎。 Linux如何安装SQLite ？发行版：Ubuntu 19.10 1sudo apt install sqlite  安装成功后，运行： 123456nevar@ubuntu:~$ sqlite3SQLite version 3.29.0 2019-07-10 17:32:03E"><meta name="keywords" content="sqlite"><meta name="author" content="Nevar"><meta name="copyright" content="Nevar"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="shortcut icon" href="/img/bird.png"><link rel="canonical" href="http://yoursite.com/2020/09/01/%E7%AC%AC%E4%B8%80%E5%A4%A9%E5%AD%A6sqlite/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="yandex-verification" content="{&quot;theme_color&quot;:{&quot;enable&quot;:true,&quot;main&quot;:&quot;#ff4757&quot;,&quot;paginator&quot;:&quot;#00c4b6&quot;,&quot;button_hover&quot;:&quot;#FF7242&quot;,&quot;text_selection&quot;:&quot;#00c4b6&quot;,&quot;link_color&quot;:&quot;#99a9bf&quot;,&quot;meta_color&quot;:&quot;#858585&quot;,&quot;hr_color&quot;:&quot;#A4D8FA&quot;,&quot;code_foreground&quot;:&quot;#F47466&quot;,&quot;code_background&quot;:&quot;rgba(27, 31, 35, .05)&quot;,&quot;toc_color&quot;:&quot;#00c4b6&quot;,&quot;blockquote_padding_color&quot;:&quot;#ff4757&quot;,&quot;blockquote_background_color&quot;:&quot;#ff4757&quot;}}"/><meta property="og:type" content="article"><meta property="og:title" content="第一天学sqlite"><meta property="og:url" content="http://yoursite.com/2020/09/01/%E7%AC%AC%E4%B8%80%E5%A4%A9%E5%AD%A6sqlite/"><meta property="og:site_name" content="NEVAR OFFICIAL"><meta property="og:description" content="SQLite 是什么？SQLite是一个轻量级的软件库，实现了自给自足、无服务器、零配置、事务性的SQL数据库引擎。 Linux如何安装SQLite ？发行版：Ubuntu 19.10 1sudo apt install sqlite  安装成功后，运行： 123456nevar@ubuntu:~$ sqlite3SQLite version 3.29.0 2019-07-10 17:32:03E"><meta property="og:image" content="http://yoursite.com/img/head_img.PNG"><meta property="article:published_time" content="2020-09-01T08:12:41.000Z"><meta property="article:modified_time" content="2020-09-02T03:40:27.923Z"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
   root: '/',
   hexoversion: '5.1.1',
   algolia: undefined,
@@ -296,4 +296,70 @@ if (autoChangeMode === '1') {
   document.body.style.overflow = 'auto';
   document.getElementById('loading-box').classList.add("loaded")
 }
-window.addEventListener('load',endLoading)</script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="/js/third-party/canvas-nest.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
+window.addEventListener('load',endLoading)</script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="118127893" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="/js/third-party/canvas-nest.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  'meta[name=description]',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
