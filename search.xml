@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>第一天学C++</title>
+      <link href="/2020/09/15/%E7%AC%AC%E4%B8%80%E5%A4%A9%E5%AD%A6C/"/>
+      <url>/2020/09/15/%E7%AC%AC%E4%B8%80%E5%A4%A9%E5%AD%A6C/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>参考书：电子工业出版社《C++程序设计》</p><p>&lt;&lt;：流插入运算符</p><h2 id="数据类型和表达式"><a href="#数据类型和表达式" class="headerlink" title="数据类型和表达式"></a>数据类型和表达式</h2><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>组成规则：必须由字母、数字、下划线组成，且第一个字符必须为字母或下划线，它不能与C++语言关键字相同，汉字与字母同等待遇。</p><p>C++语言区分大小写。</p><h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><h4 id="基本数据类型-1"><a href="#基本数据类型-1" class="headerlink" title="基本数据类型"></a>基本数据类型</h4><table><thead><tr><th>类型</th><th>位</th><th>范围</th></tr></thead><tbody><tr><td><strong>char</strong></td><td><strong>1 个字节</strong></td><td><strong>-128 到 127 或者 0 到 255</strong></td></tr><tr><td>unsigned char</td><td>1 个字节</td><td>0 到 255</td></tr><tr><td>signed char</td><td>1 个字节</td><td>-128 到 127</td></tr><tr><td><strong>int</strong></td><td><strong>4 个字节</strong></td><td><strong>-2147483648 到 2147483647</strong></td></tr><tr><td>unsigned int</td><td>4 个字节</td><td>0 到 4294967295</td></tr><tr><td>signed int</td><td>4 个字节</td><td>-2147483648 到 2147483647</td></tr><tr><td>short int</td><td>2 个字节</td><td>-32768 到 32767</td></tr><tr><td>unsigned short int</td><td>2 个字节</td><td>0 到 65,535</td></tr><tr><td>signed short int</td><td>2 个字节</td><td>-32768 到 32767</td></tr><tr><td>long int</td><td>8 个字节</td><td>-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807</td></tr><tr><td>signed long int</td><td>8 个字节</td><td>-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807</td></tr><tr><td>unsigned long int</td><td>8 个字节</td><td>0 到 18,446,744,073,709,551,615</td></tr><tr><td><strong>float</strong></td><td><strong>4 个字节</strong></td><td><strong>精度型占4个字节（32位）内存空间，+/- 3.4e +/- 38 (~7 个数字)</strong></td></tr><tr><td><strong>double</strong></td><td><strong>8 个字节</strong></td><td><strong>双精度型占8 个字节（64位）内存空间，+/- 1.7e +/- 308 (~15 个数字)</strong></td></tr><tr><td>long double</td><td>16 个字节</td><td>长双精度型 16 个字节（128位）内存空间，可提供18-19位有效数字。</td></tr><tr><td>wchar_t</td><td>2 或 4 个字节</td><td>1 个宽字符</td></tr></tbody></table><p><strong>bool</strong>：只有false和true两个值。在C++中可以用数值类型给布尔类型赋值，0代表false，非0数值代表true。</p><h4 id="用户自定义类型"><a href="#用户自定义类型" class="headerlink" title="用户自定义类型"></a>用户自定义类型</h4><p>包括数组、空类型、指针、结构体类型、联合体类型、枚举类型和类。</p><h3 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h3><p>常量是在程序运行中其值不能改变的量。在C++语言中，常量可分为6类：整型常量、实型常量、字符型常量、字符串型常量、符号常量、逻辑型常量。</p><p><strong>符号常量</strong>：符号常量是用一个符号常量名代表一个常量，符号常量名的起法与标识符的起法相同，它的定义形式有两种：</p><p>（1）const格式</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> 数据类型说明符 符号常量名=常量值</span><br><span class="line">    或</span><br><span class="line">数据类型说明符 <span class="keyword">const</span> 常量名=常量值</span><br><span class="line">    </span><br><span class="line">例如：</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">float</span> pi=<span class="number">3.1415926f</span>;</span><br></pre></td></tr></table></figure><p>（2）define格式</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> 符号常量名 字符串</span></span><br></pre></td></tr></table></figure><p>需要说明的是由于#define 格式不属于C++语句，它是编译预处理命令，所以这种格式的尾部不可以写分号。</p><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量就是在程序运行中可以改变的量。C++语言规定变量必须先定义后使用，变量名的命名与标识符相同。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习小记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何在Java中调用MySQL数据库</title>
       <link href="/2020/09/09/%E5%A6%82%E4%BD%95%E5%9C%A8Java%E4%B8%AD%E8%B0%83%E7%94%A8MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
       <url>/2020/09/09/%E5%A6%82%E4%BD%95%E5%9C%A8Java%E4%B8%AD%E8%B0%83%E7%94%A8MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
