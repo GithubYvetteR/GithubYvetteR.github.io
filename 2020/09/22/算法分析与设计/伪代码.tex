@@ -1,0 +1,54 @@
+\documentclass{article}
+    \usepackage{CJKutf8}
+    \usepackage{graphicx}
+    \usepackage{verbatim}
+    \usepackage{algorithm}
+    \usepackage{algpseudocode}
+    \usepackage{amsmath}
+    \renewcommand{\algorithmicrequire}{\textbf{Input:}}  % Use Input in the format of Algorithm
+    \renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+        \begin{algorithm}
+            \caption{\textbf{MergeSort$(A,left,right)$}}
+            \begin{algorithmic}[1] %每行显示行号
+                \Require \textbf{数组$A[1...n]$，数组下标$left,right$}
+                \Ensure \textbf{递归数组$A[left..right]$}
+                \If {$left \geq right$ } 
+                    \State \Return $A[left..right]$
+                \EndIf
+                \State $mid \leftarrow \lfloor \frac{left+right}{2} \rfloor$
+                \State \text{MergeSort}$(A,left,mid)$.
+                \State \text{MergeSort}$(A,mid+1,right)$.
+                \State \text{Merge}$(A,left,mid,right)$.
+                \State \Return $A[left..right]$
+            \end{algorithmic}
+        \end{algorithm}
+            
+        \begin{algorithm}
+            \caption{\textbf{Merge$(A,left,mid,right)$}}
+            \begin{algorithmic}[1]
+                \Require \textbf{数组$A[1...n]$，数组下标$left,mid,right$}
+                \Ensure \textbf{递增数组$A[left..right]$}
+                \State $A'[left..right] \leftarrow A[left..right]$
+                \State $i \leftarrow left, j \leftarrow mid+1,k \leftarrow 0$
+                \While{$i \geq mid \ and \ j \geq right$}
+                    \If{$A'[i] \geq A'[j]$}
+                        \State $A[left+k] \leftarrow A'[i]$
+                        \State $k \leftarrow k+1, i \leftarrow i+1$
+                    \Else
+                        \State $A[left+k] \leftarrow A'[j]$
+                        \State $k \leftarrow k+1, j \leftarrow j+1$
+                    \EndIf
+                \EndWhile
+                \If {$i \geq mid$}
+                    \State $A[left+k..right] \leftarrow A'[i..mid]$
+                \Else
+                    \State $A[left+k..right] \leftarrow A'[j..right]$
+                \EndIf
+                \State \Return $A[left..right]$
+            \end{algorithmic}
+        \end{algorithm}
+        
+    \end{CJK}
+\end{document}
