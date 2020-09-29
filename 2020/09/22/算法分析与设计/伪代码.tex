@@ -14,7 +14,7 @@
             \begin{algorithmic}[1] %每行显示行号
                 \Require \textbf{数组$A[1...n]$，数组下标$left,right$}
                 \Ensure \textbf{递归数组$A[left..right]$}
-                \If {$left \geq right$ } 
+                \If {$left \geq right$ }
                     \State \Return $A[left..right]$
                 \EndIf
                 \State $mid \leftarrow \lfloor \frac{left+right}{2} \rfloor$
@@ -24,7 +24,7 @@
                 \State \Return $A[left..right]$
             \end{algorithmic}
         \end{algorithm}
-            
+
         \begin{algorithm}
             \caption{\textbf{Merge$(A,left,mid,right)$}}
             \begin{algorithmic}[1]
@@ -49,6 +49,83 @@
                 \State \Return $A[left..right]$
             \end{algorithmic}
         \end{algorithm}
-        
+
+    \begin{algorithm}
+            \caption{\textbf{蛮力枚举法}}
+            \begin{algorithmic}[1]
+                \Require \textbf{数组$X[1...n]$}
+                \Ensure \textbf{最大子数组之和$S_{max}$}
+                \State $S_{max} \leftarrow -\infty$
+                \For{$l \leftarrow 1 \ to\ n$}
+                    \For{$r \leftarrow l \ to \ n$}
+                        \State $S(l,r) \leftarrow 0$
+                        \For{$i \leftarrow l \  to\  r$}
+                            \State $S(l,r) \leftarrow S(l,r)+X[i]$
+                        \EndFor
+                        \State $S_{max} \leftarrow$ max\{$S_{max},S(l,r)$\}
+                    \EndFor
+                \EndFor
+                \State \Return $S_{max}$
+        \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+        \caption{\textbf{优化枚举法}}
+        \begin{algorithmic}[1]
+            \Require \textbf{数组$X[1...n]$}
+            \Ensure \textbf{最大子数组之和$S_{max}$}
+            \State $S_{max} \leftarrow -\infty$
+            \For{$l \leftarrow 1 \ to\ n$}
+                \State $S(l,r) \leftarrow 0$
+                \For{$r \leftarrow l \  to\  n$}
+                    \State $S \leftarrow S+X[r]$
+                    \State $S_{max} \leftarrow$ max\{$S_{max},S$\}
+                \EndFor
+            \EndFor
+            \State \Return $S_{max}$
+        \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+            \caption{\textbf{CrossingSubArray(X,low,mid,high)}}
+            \begin{algorithmic}[1]
+                \Require \textbf{数组$X[1...n]$，数组下标$low,mid,high$}
+                \Ensure \textbf{跨越中点的最大子数组之和$S_3$}
+                \State $S_{left} \leftarrow -\infty$
+                \State $Sum \leftarrow 0$
+                \For{$l \leftarrow mid \ downto \ low$}
+                    \State $Sum \leftarrow Sum+X[l]$
+                    \State $S_{left} \leftarrow $max$\{S_{left},Sum\}$
+                \EndFor
+                \State $S_{right} \leftarrow -\infty$
+                \State $Sum \leftarrow 0$
+                \For{$r\leftarrow mid+1 \ to \ high$}
+                    \State $Sum \leftarrow Sum+X[r]$
+                    \State $S_{right} \leftarrow$ max\{$S_{right},Sum$\}
+                \EndFor
+                \State $S_3 \leftarrow S_{left}+S_{right}$
+                \State \Return $S_3$
+        \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+            \caption{\textbf{MaxSubArray(X,low,high)}}
+            \begin{algorithmic}[1]
+                \Require \textbf{数组$X[1...n]$，数组下标$low,mid,high$}
+                \Ensure \textbf{最大子数组之和$S_{max}$}
+                \If{$low=high$}
+                    \State \Return $X[low]$
+                \Else
+                    \State $mid \leftarrow \lfloor \frac{low+high}{2} \rfloor$
+                    \State $S_1 \leftarrow $ MaxSubArray(X,low,mid)
+                    \State $S_2 \leftarrow $ MaxSubArray(X,mid+1,high)
+                    \State $S_3 \leftarrow $ CrossingSubArray(X,low,mid,high)
+                    \State $S_{max} \leftarrow $ max\{$S_1,S_2,S_3$\}
+                    \State \Return $S_{max}$
+                \EndIf
+        \end{algorithmic}
+    \end{algorithm}
+
+
     \end{CJK}
-\end{document}
+\end{document} 

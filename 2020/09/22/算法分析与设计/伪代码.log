@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.1.7)  26 SEP 2020 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.1.7)  29 SEP 2020 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -388,36 +388,55 @@ File: c70gbsn.fd 2015/04/18 4.8.4
 )
 (c:/texlive/2019/texmf-dist/tex/latex/cjk/texinput/UTF8/c70gbsn.fdx
 File: c70gbsn.fdx 2015/04/18 4.8.4
-) [1
+)
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 6
+5.
 
-{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./伪代码.au
-x) ) 
+(c:/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 65.
+ [1
+
+{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./伪�
+��码.aux) ) 
 Here is how much of TeX's memory you used:
- 4099 strings out of 492163
- 51626 string characters out of 6129077
- 131114 words of memory out of 5000000
- 8358 multiletter control sequences out of 15000+600000
- 6977 words of font info for 26 fonts, out of 8000000 for 9000
+ 4210 strings out of 492163
+ 53196 string characters out of 6129077
+ 143114 words of memory out of 5000000
+ 8442 multiletter control sequences out of 15000+600000
+ 10474 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,5n,27p,300b,900s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/t
-exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/20
-19/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2019/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb><c:/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu4e.pfb><c:/texliv
-e/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu58.pfb><c:/texlive/2019/texmf-d
-ist/fonts/type1/arphic/gbsnu/gbsnu5f.pfb><c:/texlive/2019/texmf-dist/fonts/type
-1/arphic/gbsnu/gbsnu65.pfb><c:/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu
-/gbsnu68.pfb><c:/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu7e.pfb><
-c:/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu90.pfb><c:/texlive/201
-9/texmf-dist/fonts/type1/arphic/gbsnu/gbsnuff.pfb>
-Output written on 伪代码.pdf (1 page, 99072 bytes).
+ 34i,5n,27p,300b,909s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.p
+fb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/te
+xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2019
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2019/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu4e.pfb><c
+:/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu4f.pfb><c:/texlive/2019
+/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu52.pfb><c:/texlive/2019/texmf-dist/fo
+nts/type1/arphic/gbsnu/gbsnu53.pfb><c:/texlive/2019/texmf-dist/fonts/type1/arph
+ic/gbsnu/gbsnu54.pfb><c:/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu
+58.pfb><c:/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu59.pfb><c:/tex
+live/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu5b.pfb><c:/texlive/2019/texm
+f-dist/fonts/type1/arphic/gbsnu/gbsnu5f.pfb><c:/texlive/2019/texmf-dist/fonts/t
+ype1/arphic/gbsnu/gbsnu65.pfb><c:/texlive/2019/texmf-dist/fonts/type1/arphic/gb
+snu/gbsnu67.pfb><c:/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu68.pf
+b><c:/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu6c.pfb><c:/texlive/
+2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu70.pfb><c:/texlive/2019/texmf-dis
+t/fonts/type1/arphic/gbsnu/gbsnu76.pfb><c:/texlive/2019/texmf-dist/fonts/type1/
+arphic/gbsnu/gbsnu7e.pfb><c:/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/g
+bsnu86.pfb><c:/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu8d.pfb><c:
+/texlive/2019/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu90.pfb><c:/texlive/2019/
+texmf-dist/fonts/type1/arphic/gbsnu/gbsnuff.pfb>
+Output written on 伪代码.pdf (3 pages, 146752 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 146 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
