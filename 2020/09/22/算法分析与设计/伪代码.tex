@@ -5,6 +5,7 @@
     \usepackage{algorithm}
     \usepackage{algpseudocode}
     \usepackage{amsmath}
+    \usepackage{amssymb}
     \renewcommand{\algorithmicrequire}{\textbf{Input:}}  % Use Input in the format of Algorithm
     \renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm
 \begin{document}
@@ -22,6 +23,26 @@
                 \State \text{MergeSort}$(A,mid+1,right)$.
                 \State \text{Merge}$(A,left,mid,right)$.
                 \State \Return $A[left..right]$
+            \end{algorithmic}
+        \end{algorithm}
+
+     \begin{algorithm}
+                \caption{\textbf{PROCEDURE Match(s)}}
+                \begin{algorithmic}[1]
+                    \Require \textbf{an intermediate state s; the initial state $s_0$ has $M(s_0)=\varnothing$}
+                    \Ensure \textbf{the mapping between the two graphs}
+                    \If{$M(s)$ covers all the nodes of $G_2$}
+                        \State \textbf{OUTPUT} $M(s)$
+                    \Else
+                        \State Compute the set $P(s)$ of the pairs candidate for inclusion in $M(s)$
+                        \For{each $p$ in $P(s)$}
+                            \If{the feasibility rules succeed for the inclusion of $p$ in $M(s)$}
+                                \State Compute the state s' obtained by adding $p$ to $M(s)$
+                                \State \textbf{CALL} Match($s'$)
+                            \EndIf
+                        \EndFor
+                        \State Restore data structure
+                    \EndIf
             \end{algorithmic}
         \end{algorithm}
 
@@ -126,6 +147,33 @@
         \end{algorithmic}
     \end{algorithm}
 
+    \begin{algorithm}
+            \begin{algorithmic}[1]
+            \State \textbf{Function}  VF2($G_1$,$G_2$)
+                \State $Solutions=\varnothing$
+                \State $M(s_0)=\varnothing$
+                \State $Match(M(s_0),G_2,G_1,Solutions)$
+                \State \Return $Solutions$
+        \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}
+            \begin{algorithmic}[1]
+            \State \textbf{Function} $Match(M(s),G_2,G_1,Solutions)$
+                \If{$M(s)$ covers all the nodes of $G_1$}
+                    \State $Append(M(s),Solutions)$
+                \Else
+                    \State $P(s)=GetCantitates(M(s))$
+                    \For{each pair in $P(s)$}
+                        \If{$IsFeasible(pair)$}
+                            \State $M(s')=ExtendMatch(M(s),pair)$
+                            \State $Match(M(s'),G_2,G_1,Solutions)$
+                            \State $BackTrack(M(s'),pair)$
+                        \EndIf
+                    \EndFor
+                \EndIf                            
+        \end{algorithmic}
+    \end{algorithm}
 
     \end{CJK}
 \end{document} 
