@@ -10,6 +10,27 @@
     \renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm
 \begin{document}
 \begin{CJK}{UTF8}{gbsn}
+
+\begin{algorithm}
+            \caption{\textbf{DEEPWALK$(G,w,d,\gamma ,t)$}}
+            \begin{algorithmic}[1] %每行显示行号
+                \Require 图$G(V,E)$,窗口大小$w$,嵌入尺寸$d$,对每个节点做随机游走的次数$\gamma$,游走长度$t$
+                \Ensure 顶点特征矩阵$\Phi \in \mathbb{R}^{|V|\times d}$
+                \State 初始化：从$\mathcal{U}^{|V|\times d}$样本$\Phi$
+                \State 从$V$中构建二叉树$T$
+                \For{$i=0$ to $\gamma$}
+                    \State $\mathcal{O}=$Shuffle($V$)打乱网络中的节点
+                    \For{each $v_i \in \mathcal{O}$}
+                        \State 以每个节点为根结点生成随机游走 $\mathcal{W}_{v_i}=RandomWalk(G,v_i,t)$
+                        \State 使用SkipGram($\Phi ,\mathcal{W}_{v_i},w$)模型利用梯度方法对参数进行更新
+                    \EndFor
+                \EndFor
+                
+            \end{algorithmic}
+        \end{algorithm}
+
+
+
         \begin{algorithm}
             \caption{\textbf{MergeSort$(A,left,right)$}}
             \begin{algorithmic}[1] %每行显示行号
@@ -171,9 +192,11 @@
                             \State $BackTrack(M(s'),pair)$
                         \EndIf
                     \EndFor
-                \EndIf                            
+                \EndIf
         \end{algorithmic}
     \end{algorithm}
+
+
 
     \end{CJK}
 \end{document} 
