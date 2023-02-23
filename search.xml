@@ -4,13 +4,27 @@
   
     
     <entry>
-      <title></title>
+      <title>大规模复杂信息网络表示学习</title>
       <link href="/2022/08/31/%E5%A4%A7%E8%A7%84%E6%A8%A1%E5%A4%8D%E6%9D%82%E4%BF%A1%E6%81%AF%E7%BD%91%E7%BB%9C%E8%A1%A8%E7%A4%BA%E5%AD%A6%E4%B9%A0/"/>
       <url>/2022/08/31/%E5%A4%A7%E8%A7%84%E6%A8%A1%E5%A4%8D%E6%9D%82%E4%BF%A1%E6%81%AF%E7%BD%91%E7%BB%9C%E8%A1%A8%E7%A4%BA%E5%AD%A6%E4%B9%A0/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="大规模复杂信息网络表示学习"><a class="markdownIt-Anchor" href="#大规模复杂信息网络表示学习"></a> 大规模复杂信息网络表示学习</h1><h2 id="1-经典网络表示学习"><a class="markdownIt-Anchor" href="#1-经典网络表示学习"></a> 1. 经典网络表示学习</h2><p>将图嵌入学习算法应用在复杂信息网络上进行特征学习。首先将网络转换成矩阵表示，然后通过求解矩阵特征向量的形式，进行降维以获取网络的低维表达。</p><h3 id="基于谱方法的网络表示学习"><a class="markdownIt-Anchor" href="#基于谱方法的网络表示学习"></a> 基于谱方法的网络表示学习</h3><p>直接从矩阵特征值等角度出发进行网络特征学习。</p><h4 id="主成分分析pca-奇异值分解svd"><a class="markdownIt-Anchor" href="#主成分分析pca-奇异值分解svd"></a> 主成分分析PCA &amp; 奇异值分解SVD</h4><p>PCA/SVD可以</p><p><a href="https://www.cnblogs.com/pinard/p/6239403.html">主成分分析</a></p><p><a href="https://www.cnblogs.com/pinard/p/6251584.html">奇异值分解</a></p><h3 id="基于最优化的网络表示学习"><a class="markdownIt-Anchor" href="#基于最优化的网络表示学习"></a> 基于最优化的网络表示学习</h3>]]></content>
       
       
+      <categories>
+          
+          <category> 学习小记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 图嵌入 </tag>
+            
+            <tag> 图神经网络 </tag>
+            
+        </tags>
       
     </entry>
     
